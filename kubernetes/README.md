@@ -18,4 +18,4 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/python-rhsm-certificat
 rpm2cpio python-rhsm-certificates-1.19.10-1.el7_4.x86_64.rpm | cpio -iv --to-stdout ./etc/rhsm/ca/redhat-uep.pem | tee /etc/rhsm/ca/redhat-uep.pem
 ```
 
-注意:registry.access.redhat.com/rhel7/pod-infrastructure:latest是一个kubernetes的基础镜像来的，下载不了，是缺少文件，CA认证不了
+注意:registry.access.redhat.com/rhel7/pod-infrastructure:latest是一个kubernetes的基础镜像来的，下载不了，是缺少redhat-uep.pem文件，CA认证不了
